@@ -1,0 +1,41 @@
+﻿<Window x:Class="DigitaalBoekVanDeSint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitaalBoekVanDeSint"
+        mc:Ignorable="d"
+        Title="Grote Boek van Sinterklaas" Height="500" Width="900">
+    <Grid Background="Maroon">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Name="ComboBoxKinderen" Grid.Column="1" Margin="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Gray" FontSize="25" >
+            <ComboBoxItem Content="Stout"/>
+            <ComboBoxItem Content="Flink"/>
+        </ComboBox>
+        <TextBox Name="NaamKinderen" Margin="20" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextAlignment="Center"></TextBox>
+        <Button Content="Registereer" FontSize="25" Grid.Column="2" Margin="20" Click="BtnRegisteren_CLick"></Button>
+        <TextBlock Text="Flink" Grid.Row="1" FontSize="26" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Foreground="PaleGoldenrod"></TextBlock>
+        <TextBlock Text="Stout" Grid.Row="1" Grid.Column="2" FontSize="26" TextAlignment="Center" VerticalAlignment="Center" Margin="20" Foreground="PaleGoldenrod"></TextBlock>
+        <ListBox x:Name="ListBoxFlinkKind" SelectionMode="Extended" Grid.Row="2" Margin="20" FontSize="20" Background="PaleGoldenrod">
+            <ListBoxItem Content="Hella"/>
+            <ListBoxItem Content="BElla"/>
+        </ListBox>
+        <ListBox x:Name="ListBoxStoutKind" SelectionMode="Extended" Grid.Row="2" Grid.Column="2" Margin="20" FontSize="20" Background="PaleGoldenrod"></ListBox>
+        <Button Content="Verwijder kinderen uit de lijst" Grid.Column="1" Padding="10" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Click="BtnVerwijder_Click"></Button>
+        <Button x:Name="knopNaarStout" Background="Maroon" BorderBrush="Transparent"  Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Left" Width="100" Height="50" Click="knopNaarStout_Click">
+            <Image Source="images/right.jpg"/>
+        </Button>
+        <Button x:Name="knopNaarFlink" Background="Maroon" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="100" Height="50">
+            <Image Source="images/left.png"/>
+        </Button>
+    </Grid>
+</Window>
